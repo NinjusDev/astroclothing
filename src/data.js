@@ -4,7 +4,7 @@ export const data = [
 		img: 'https://i.postimg.cc/yNHnPss8/hoodie-travis.png',
 		nameProduct: 'HOODIE TRAVIS OVERSIZE',
 		price: 18760,
-		quantity: 20,
+		quantity: 1,
 		category: 'hoodie',
 	},
 	{
