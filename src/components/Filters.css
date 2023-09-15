@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+.filter {
+    padding: 20px 0px;
+}
+
+.filter select {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    border: none;
+}
+
+.filter select:focus {
+    outline: none;
+}
+  
+.filter select:focus-visible {
+    border: none;
+}
+
+@media screen and (max-width: 668px) {
+    .filter {
+        display: flex;
+        justify-content: center;
+    }
+}

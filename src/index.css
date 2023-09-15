@@ -28,17 +28,18 @@ img {
 	max-width: 100%;
 }
 
-header {
+.header {
 	display: flex;
-	justify-content: space-between;
 	padding: 20px 0 20px 0;
 }
 
 .container-icon {
 	display: flex;
-	position: relative;
+	justify-content: flex-end;
 	align-items: center;
-}
+	position: relative;
+	margin-left: auto;
+  }
 
 .count-products {
 	position: absolute;
@@ -230,7 +231,6 @@ header {
 	padding: 15px 0;
 	display: block;
 	width: 100%;
-	margin-top: 10px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	font-family: inherit;
@@ -241,6 +241,6 @@ header {
 
 .btn-clear-all:hover{
   background-color: #333;
-  transform: scale(1.03);
+  transform: scale(1.01);
   border-radius: 0;
 }

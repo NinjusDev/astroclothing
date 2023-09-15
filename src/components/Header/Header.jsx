@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import Images from '../../assets/ImgExport';
 import './Header.css';
@@ -25,10 +26,15 @@ export const Header = ({
 		setAllProducts([]);
 		setTotal(0);
 		setCountProducts(0);
+		localStorage.clear();
+	};
+
+	const redirectToCheckout = () => {
+		window.location.href = "/checkout";
 	};
 
 	return (
-		<header>
+		<header className='header'>
 			<div className='logoclk'>
 				<img src={ Images.logo2Image } alt=""></img>
 			</div>
@@ -110,6 +116,10 @@ export const Header = ({
 								<h3>Total:</h3>
 								<span className='total-pagar'>${total}</span>
 							</div>
+							
+							<button className='to-checkout' onClick={redirectToCheckout}>
+									Ir a pagar
+							</button>
 
 							<button className='btn-clear-all' onClick={onCleanCart}>
 								Vaciar Carrito

@@ -10,7 +10,7 @@
     align-items: center;
     text-align: center;
     color: #ebebeb;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../../assets/img/herobackg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(../../assets/img/herobackg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -23,13 +23,15 @@
 }
 
 .titlecolor {
-    background: hsla(252, 35%, 41%, 1);
+    background: hsla(213, 80%, 24%, 1);
 
-    background: -webkit-linear-gradient(90deg, hsla(252, 35%, 41%, 1) 19%, hsla(258, 57%, 60%, 1) 48%, hsla(270, 55%, 57%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(213, 80%, 24%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
     
-    background: -moz-linear-gradient(90deg, hsla(252, 35%, 41%, 1) 19%, hsla(258, 57%, 60%, 1) 48%, hsla(270, 55%, 57%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(213, 80%, 24%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
     
-    background: linear-gradient(90deg, hsla(252, 35%, 41%, 1) 19%, hsla(258, 57%, 60%, 1) 48%, hsla(270, 55%, 57%, 1) 100%);
+    background: linear-gradient(90deg, hsla(213, 80%, 24%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#0C376C", endColorstr="#557c93", GradientType=1 );
 
     -webkit-background-clip: text;
     color: transparent;
@@ -45,5 +47,10 @@
         justify-content: center;
         align-items: center;
         font-size: 16px;
+    }
+
+    .hero {
+        background-position: center;
+        border-radius: 0;
     }
 }
