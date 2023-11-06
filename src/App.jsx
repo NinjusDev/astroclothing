@@ -4,6 +4,7 @@ import { CheckoutPage } from './components/Checkout/Checkout';
 import Contact from './components/Contact/Contact';
 import { Header } from './components/Header/Header';
 import { Home } from './components/Home/Home';
+import Login from './components/Login/Login';
 import TermsCondictions from './components/Login/TyC';
 import { ProductList } from './components/ProductList';
 
@@ -45,6 +46,7 @@ function App() {
 				} />
 
 				<Route path='/contact' element={ <Contact /> } />
+				<Route path='/login' element={ <Login /> } />
 				<Route path='/terms' element={ <TermsCondictions /> } />
 				<Route path='/checkout' element={ <CheckoutPage /> } />
 			</Routes>
