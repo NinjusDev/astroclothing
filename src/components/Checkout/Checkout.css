@@ -18,17 +18,25 @@
     margin: 0 80px;
 }
 
-.product-checkout img{
-	width: 250px;
+.product-checkout h2 {
+    margin: 10px 0 40px 0;
+}
+
+.product-checkout img {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    margin: 0 auto;
 }
 
 .product-checkout p {
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 5px;
+    padding: 6px;
 }
 
-.product-checkout h2 {
-    margin-top: 10px;
-}
 
 .checkout input, select {
     margin-top: 10px;

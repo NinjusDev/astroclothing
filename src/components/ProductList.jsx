@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from 'react';
-import { data } from '../data';
-import Filter from './Filters';
-import { filterProductsByCategory } from './filterProducts';
+import { useEffect, useState } from "react";
+import { data } from "../data";
+import Filter from "./Filters";
+import { filterProductsByCategory } from "./filterProducts";
 
 export const ProductList = ({
   allProducts,
@@ -12,11 +12,11 @@ export const ProductList = ({
   total,
   setTotal,
 }) => {
-  const [category, setCategory] = useState(''); // Estado para la categoría seleccionada
+  const [category, setCategory] = useState(""); // Estado para la categoría seleccionada
 
   useEffect(() => {
     // Cargar el carrito desde localStorage cuando se monta el componente
-    const savedCart = localStorage.getItem('cart');
+    const savedCart = localStorage.getItem("cart");
     if (savedCart) {
       setAllProducts(JSON.parse(savedCart));
     }
@@ -32,9 +32,7 @@ export const ProductList = ({
     if (existingProduct) {
       // Si el producto ya existe, actualiza su cantidad
       const updatedProducts = allProducts.map((item) =>
-        item.id === product.id
-          ? { ...item, quantity: item.quantity + 1 }
-          : item
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
       );
 
       setAllProducts(updatedProducts);
@@ -44,11 +42,12 @@ export const ProductList = ({
     }
 
     // Actualiza el contador de productos y el total
-    setCountProducts(countProducts + 1);
+    const updatedCount = countProducts + 1 >= 0 ? countProducts + 1 : 0;
+    setCountProducts(updatedCount);
     setTotal(total + product.price);
 
     // Almacena el carrito en localStorage después de actualizarlo
-    localStorage.setItem('cart', JSON.stringify(allProducts));
+    localStorage.setItem("cart", JSON.stringify(allProducts));
   };
 
   const handleCategoryChange = (selectedCategory) => {
@@ -58,17 +57,19 @@ export const ProductList = ({
   return (
     <>
       <Filter onCategoryChange={handleCategoryChange} />
-      <div className='container-items'>
+      <div className="container-items">
         {filteredProducts.map((product) => (
-          <div className='item' key={product.id}>
+          <div className="item" key={product.id}>
             <figure>
               <img src={product.img} alt={product.nameProduct} />
             </figure>
-            <div className='info-product'>
+            <div className="info-product">
               <h2>{product.nameProduct}</h2>
-              <p className='price'>${product.price}</p>
-              <p className='monthly-payment'></p>
-              <button onClick={() => onAddProduct(product)}>Añadir al carrito</button>
+              <p className="price">${product.price}</p>
+              <p className="monthly-payment"></p>
+              <button onClick={() => onAddProduct(product)}>
+                Añadir al carrito
+              </button>
             </div>
           </div>
         ))}

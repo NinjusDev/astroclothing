@@ -38,7 +38,6 @@ img {
 	justify-content: flex-end;
 	align-items: center;
 	position: relative;
-	margin-left: auto;
   }
 
 .count-products {
@@ -142,6 +141,18 @@ img {
 	gap: 20px;
 }
 
+
+@media screen and (min-width: 768px) {
+    .burger {
+        display: none;
+    }
+
+	.count-products {
+		top: 8%;
+		right: 68px;
+	}
+}
+
 @media screen and (max-width: 1096px) {
 	.container-items {
 		display: grid;
@@ -162,9 +173,26 @@ img {
 		margin: 5px 60px;
 	}
 
-	.container-icon {
-		margin-right: 20px;
-	}
+	.count-products {
+	position: absolute;
+	top: 6%;
+	right: 0;
+
+	background-color: #000;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+   }
+
+   
+    .icon-cart, .count-products {
+        margin-right: 4px;
+    }
 }
 
 .item {

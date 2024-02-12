@@ -62,29 +62,5 @@ export const data = [
 		price: 10800,
 		quantity: 1,
 		category: 'remeras',
-	},
-	{
-		id: 9,
-		img: '',
-		nameProduct: '',
-		price: 0,
-		quantity: 1,
-		category: '',
-	},
-	{
-		id: 10,
-		img: '',
-		nameProduct: '',
-		price: 0,
-		quantity: 1,
-		category: '',
-	},
-	{
-		id: 11,
-		img: '',
-		nameProduct: '',
-		price: 0,
-		quantity: 1,
-		category: '',
-	},
+	}
 ];
