@@ -8,7 +8,7 @@
 
 .checkout-info {
     grid-column: 1;
-    margin-bottom: 20px;
+    margin: 0 10px 20px 10px;
 }
 
 .product-checkout {
@@ -16,6 +16,7 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 20px;
+    min-width: 500px;
     max-width: auto;
     margin: auto;
 }
@@ -35,17 +36,73 @@
     margin-bottom: 10px;
 }
 
-.contact-info input,
-.shipping-info select,
-.address-info input,
-.apartment-info input,
-.id-info input,
-.city-province-pcode input {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    margin-bottom: 10px;
+/* Estilos base del formulario */
+form {
+    display: grid;
+    grid-gap: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.checkout-form form h2 {
+    margin: 10px 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.checkout-form section {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.checkout-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.checkout-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    form {
+        padding: 10px;
+        max-width: 360px;
+    }
+
+    .checkout-form input[type="text"],
+    .checkout-form select,
+    .checkout-form button {
+        font-size: 0.9rem;
+    }
+    
+    .checkout-form section.name-info,
+    .checkout-form section.city,
+    .checkout-form section.province {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 @media screen and (min-width: 768px) {
     .checkout {
