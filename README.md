@@ -75,8 +75,8 @@ AstroClothingFP is a React-based project using essential dependencies like forms
 │   │   │   ├── rip-curl-2-41-464e02c5594be8224a16790806581043-480-0.webp
 │   │   │   └── social1-eeba3f1cc6402e191816881367593738-480-0.webp
 │   │   └── img
-│   │       ├── herobackg.jpg
-│   │       ├── icon.png
+│   │       ├── herobackg.avif
+│   │       ├── icon.avif
 │   │       └── logo2.png
 │   ├── components
 │   │   ├── Checkout
@@ -166,7 +166,7 @@ yarn dev
 
 ## ☁️ Deploy
 
-`[Application name](Your App URL)`
+`[Vercel](astroclothingfp.vercel.app)`
 
 ## 📄 License
 
