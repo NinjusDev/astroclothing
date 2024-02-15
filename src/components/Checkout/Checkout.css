@@ -1,6 +1,6 @@
 .checkout {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr;
     grid-gap: 20px;
     justify-content: center;
     text-align: center;
@@ -8,53 +8,47 @@
 
 .checkout-info {
     grid-column: 1;
+    margin-bottom: 20px;
 }
 
 .product-checkout {
-    grid-column: 2;
     background-color: #fff;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin: 0 80px;
+    padding: 20px;
+    max-width: auto;
+    margin: auto;
 }
 
 .product-checkout h2 {
-    margin: 10px 0 40px 0;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .product-checkout img {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    margin: 0 auto;
+    height: 250px;
+    max-width: 100%;
+    margin-bottom: 20px;
 }
 
 .product-checkout p {
-    display: inline-block;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-    padding: 6px;
+    margin-bottom: 10px;
 }
 
-
-.checkout input, select {
-    margin-top: 10px;
-}
-
-.contact-info input, .shipping-info select, .address-info input, .apartment-info input {
-    width: 500px;
-    padding: 5px;
-}
-
-.id-info input {
-    width: 248px;
-    padding: 5px;
-    margin-right: 4px;
-}
-
+.contact-info input,
+.shipping-info select,
+.address-info input,
+.apartment-info input,
+.id-info input,
 .city-province-pcode input {
-    width: 164px;
-    padding: 5px;
-    margin-right: 4px;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .checkout {
+        grid-template-columns: 1fr 1fr;
+    }
 }
